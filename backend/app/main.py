@@ -12,10 +12,18 @@ app = FastAPI(
     version=settings.VERSION,
     openapi_url=f"{settings.API_V1_STR}/openapi.json",
     docs_url="/docs",
-    redoc_url="/redoc"
+    redoc_url=None
 )
 
 Base.metadata.create_all(bind=engine)
+
+@app.get("/", tags=["system"])
+def root():
+    return {
+        "message": "TaskCore API is running",
+        "docs": "/docs",
+        "health": "/health"
+    }
 
 # Global Exception Handlers
 @app.exception_handler(RequestValidationError)
