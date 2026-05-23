@@ -171,6 +171,22 @@ docker compose up --build
 
 ---
 
+# 📸 Screenshots
+
+## Login Page    
+
+![Login](screenshots/login.png)
+
+## Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+## Swagger API Docs
+
+![Swagger](screenshots/swagger.png)
+
+---
+  
 # 🧪 Running Tests
 
 ```bash
@@ -255,3 +271,5 @@ https://github.com/Pavi1906
 # 📄 License
 
 This project is intended for educational and internship evaluation purposes.
+
+---
