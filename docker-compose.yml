@@ -1,0 +1,29 @@
+services:
+  backend:
+    build: 
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - data_volume:/app/data
+    environment:
+      - DATABASE_URL=sqlite:////app/data/sql_app.db
+      - SECRET_KEY=LOCAL_DOCKER_SECRET_DO_NOT_REUSE
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+      args:
+        - VITE_API_URL=http://localhost:8000/api/v1
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  data_volume:
