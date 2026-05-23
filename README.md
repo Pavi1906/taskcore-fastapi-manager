@@ -3,6 +3,7 @@
 TaskCore PRO is a full-stack task management application built using FastAPI, React, SQLAlchemy, JWT authentication, and Docker.
 
 The application allows users to:
+
 - Register and login securely
 - Create, update, complete, and delete tasks
 - View only their own tasks
@@ -15,12 +16,14 @@ This project was built as part of a Python Developer Intern assessment.
 # 📌 Features
 
 ## Authentication
+
 - User Registration
 - User Login
 - JWT Authentication
 - Password Hashing using bcrypt
 
 ## Task Management
+
 - Create Tasks
 - View All Tasks
 - View Single Task
@@ -30,11 +33,13 @@ This project was built as part of a Python Developer Intern assessment.
 - Task Filtering (`?completed=true`)
 
 ## Frontend
+
 - React + Vite frontend
 - Responsive UI
 - Connected to FastAPI backend using Axios
 
 ## Backend
+
 - FastAPI REST API
 - SQLAlchemy ORM
 - Pydantic Validation
@@ -46,7 +51,7 @@ This project was built as part of a Python Developer Intern assessment.
 
 # 🏗 Project Structure
 
-```text
+```bash
 .
 ├── backend/
 │   ├── alembic/
@@ -70,6 +75,7 @@ This project was built as part of a Python Developer Intern assessment.
 # ⚙️ Tech Stack
 
 ## Backend
+
 - FastAPI
 - SQLAlchemy
 - SQLite
@@ -79,12 +85,14 @@ This project was built as part of a Python Developer Intern assessment.
 - Passlib bcrypt
 
 ## Frontend
+
 - React
 - TypeScript
 - Vite
 - Axios
 
 ## DevOps
+
 - Docker
 - Docker Compose
 
@@ -128,16 +136,13 @@ This project was built as part of a Python Developer Intern assessment.
 - Docker Desktop installed
 - Git installed
 
----
-
 ## Clone Repository
 
 ```bash
 git clone https://github.com/Pavi1906/taskcore-fastapi-manager.git
+
 cd taskcore-fastapi-manager
 ```
-
----
 
 ## Start Application
 
@@ -153,7 +158,6 @@ docker compose up --build
 |---|---|
 | Frontend | http://localhost:3000 |
 | Swagger Docs | http://localhost:8000/docs |
-| ReDoc | http://localhost:8000/redoc |
 
 ---
 
@@ -161,10 +165,9 @@ docker compose up --build
 
 | Service | URL |
 |---|---|
-| Frontend Deployment | ADD_YOUR_VERCEL_LINK |
-| Backend API | ADD_YOUR_RENDER_LINK |
-| Swagger Docs | ADD_YOUR_RENDER_LINK/docs |
-| ReDoc | ADD_YOUR_RENDER_LINK/redoc |
+| Frontend Deployment | https://taskcore-project.vercel.app |
+| Backend API | https://taskcore-fastapi-manager.onrender.com |
+| Swagger Docs | https://taskcore-fastapi-manager.onrender.com/docs |
 
 ---
 
@@ -172,7 +175,9 @@ docker compose up --build
 
 ```bash
 cd backend
+
 pip install -r requirements.txt
+
 pytest -v
 ```
 
@@ -180,7 +185,7 @@ pytest -v
 
 # 🔧 Environment Variables
 
-Create a `.env` file inside the backend directory:
+Create a `.env` file inside the `backend` directory:
 
 ```env
 DATABASE_URL=sqlite:////app/data/sql_app.db
@@ -193,6 +198,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES=60
 # 📦 Docker Support
 
 The project includes:
+
 - Backend Dockerfile
 - Frontend Dockerfile
 - Docker Compose orchestration
@@ -221,7 +227,7 @@ docker compose up --build
 - Dockerfile
 - Responsive UI
 - Pytest Structure
-- .env.example Included
+- `.env.example` Included
 - Frontend & Backend Separation
 
 ---
@@ -234,6 +240,15 @@ docker compose up --build
 - Redis caching
 - Async background jobs
 - Task priority & due dates
+
+---
+
+# 👩‍💻 Author
+
+**Pavithra P**
+
+GitHub:  
+https://github.com/Pavi1906
 
 ---
 
